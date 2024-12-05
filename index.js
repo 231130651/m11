@@ -17,6 +17,9 @@ app.use(express.json());
 
 app.use("/api/v1", allRoutes);
 
+const perpusRoutes  = require("src\routes\perpustakaan.js")
+app.use('/perpustakaan', allRoutes)
+
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port} ...`);
 });
